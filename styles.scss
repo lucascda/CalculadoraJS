@@ -1,0 +1,45 @@
+$width-calculadora: 300px;
+$width-numeros-container: 250px;
+$width-funcoes-container: 50px;
+$height-calculadora: 500px;
+$height-visor: 40px;
+
+.calculadora-container {
+  width: $width-calculadora;
+  height: $height-calculadora;
+  padding: 5px;
+  background-color: rgb(41, 34, 34);
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  .calculadora-visor {
+    width: 100%;
+    height: $height-visor;
+  }
+
+  .btn-numero {
+    display: inline-block;
+    width: calc(#{$width-numeros-container} / 3);
+    height: 50px;
+    background-color: white;
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    border: 1px solid black;
+  }
+  .numeros-container {
+    width: $width-numeros-container;
+    //height: calc(#{$height-calculadora} - #{$height-visor});
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    background-color: red;
+  }
+  .num-0 {
+    flex-grow: 2;
+  }
+}

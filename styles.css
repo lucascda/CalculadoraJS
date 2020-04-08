@@ -1,0 +1,39 @@
+.calculadora-container {
+  width: 300px;
+  height: 500px;
+  padding: 5px;
+  background-color: #292222;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.calculadora-container .calculadora-visor {
+  width: 100%;
+  height: 40px;
+}
+.calculadora-container .btn-numero {
+  display: inline-block;
+  width: calc(250px / 3);
+  height: 50px;
+  background-color: white;
+  text-decoration: none;
+  border: none;
+  text-align: center;
+  border: 1px solid black;
+}
+.calculadora-container .numeros-container {
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  background-color: red;
+}
+.calculadora-container .num-0 {
+  flex-grow: 2;
+}
+
+/*# sourceMappingURL=styles.css.map */
