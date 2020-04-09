@@ -47,7 +47,6 @@ $height-visor: 40px;
     align-items: flex-start;
     background-color: red;
     .btn-numero {
-      display: inline-block;
       width: calc(#{$width-numeros-container} / 3);
       height: 50px;
       background-color: white;
