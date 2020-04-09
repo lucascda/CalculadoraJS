@@ -1,6 +1,6 @@
 .calculadora-container {
   width: 300px;
-  height: 400px;
+  height: 300px;
   padding: 5px;
   background-color: #292222;
   display: flex;
@@ -14,7 +14,7 @@
 }
 .calculadora-container .menu-direita-container {
   width: calc(300px - 250px);
-  height: 350px;
+  height: 250px;
   background-color: green;
 }
 .calculadora-container .menu-direita-container .btn-menu-direita {
@@ -37,7 +37,6 @@
   background-color: red;
 }
 .calculadora-container .numeros-container .btn-numero {
-  display: inline-block;
   width: calc(250px / 3);
   height: 50px;
   background-color: white;
