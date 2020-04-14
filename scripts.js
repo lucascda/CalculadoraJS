@@ -16,7 +16,7 @@ let calcVisor = element(".calculadora-visor"), // visor
   nums = element(".num"), // nodelist numeros
   ops = element(".operator"), // nodeList operadores
   oldNum = "", // numero antigo
-  actualNum = "", // numero atual
+  actualNum = "0  ", // numero atual
   result = "", // resultado até o momento
   actualOp = "", // operador atual
   isToggled = false;
@@ -55,9 +55,10 @@ let setOp = function () {
 // quando clica no botão de resultado
 
 let mostraNum = function () {
-  oldNum = parseFloat(oldNum);
-  actualNum = parseFloat(actualNum);
-
+  if (oldNum !== "" && actualNum !== "") {
+    oldNum = parseFloat(oldNum);
+    actualNum = parseFloat(actualNum);
+  }
   switch (actualOp) {
     case "+":
       result = oldNum + actualNum;
