@@ -18,8 +18,18 @@ let calcVisor = element(".calculadora-visor"), // visor
   oldNum = "", // numero antigo
   actualNum = "", // numero atual
   result = "", // resultado até o momento
-  actualOp = ""; // operador atual
+  actualOp = "", // operador atual
+  isToggled = false;
 
+let toggle = function () {
+  if (result && result.toString === calcVisor.innerHTML) {
+    result = result * -1;
+    calcVisor.innerHTML = result;
+  } else {
+    actualNum = actualNum * -1;
+    calcVisor.innerHTML = actualNum;
+  }
+};
 // quando clica no botão de numero
 
 let setNum = function () {
@@ -76,7 +86,7 @@ let mostraNum = function () {
 // quando clica no botao de limpar tudo
 let clearAll = function () {
   oldNum = "";
-  theNum = "";
+  actualNum = "";
   calcVisor.innerHTML = "0";
 };
 
@@ -92,3 +102,4 @@ for (let i = 0; i < ops.length; i++) {
 
 equals.addEventListener("click", mostraNum);
 element(".clearall").addEventListener("click", clearAll);
+element(".toggle").addEventListener("click", toggle);
